@@ -1,7 +1,136 @@
 html, body, h1, h2, h3, h4, h5, h6, p, div, ol, ul, li {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    /* color: white; */
-    /* background-color: black; */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* color: white; */
+  /* background-color: black; */
+}
+
+$borderLine: 2px solid darkgray;
+$backTriangle: 66vw;
+@mixin triangle{
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+body {
+  background-color: #ddd;
+  #triangle1 {
+    @include triangle;
+    top: 0;
+    z-index: -10;
+    border-top: $backTriangle solid #333;
+    border-right: $backTriangle solid transparent;
+  }
+  #contentContainer {
+    background-color: #fff;
+    padding: 100px 60px 0 60px;
+    width: 696px;
+    height: 956px;
+    z-index: -1;
+    box-shadow: -27px 34px 41px 0px rgba(0,0,0,1);
+    margin: 65px auto 0 auto;
+    position: relative;
+    hr {
+      border: black solid ;
+      border-width: 2px;
+      width: 35px;
+      text-align: right;
+      margin: 10px 0 20px 0
+    }
+    h1, h2, h3, h4{
+      font-family: "Gill Sans", sans-serif;
+    }
+    h1 {
+      font-weight: 500;
+      font-size: 3rem;
+      letter-spacing: .4rem;
+    }
+    h2 {
+      font-weight: 100;
+      font-size: 1.1rem;
+      letter-spacing: .1rem;
+      margin: 10px 0 10px 0;
+    }
+    h3 {
+      margin: 10px 0 10px 0;
+      font-weight: 600;
+      font-size: 1.2rem;
+      letter-spacing: .1rem;
+    }
+    h4 {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    p {
+      font-size: .9em;
+    }
+    #top {
+      border-bottom: $borderLine;
+      width: 590px;
+      #triangle2 {
+        @include triangle;
+        z-index: 0;
+        right: 0;
+        top: 0;
+        border-top: 400px solid black;
+        border-left: 400px solid transparent;
+      }
+    }
+    #bottom {
+      display: flex;
+      #leftThing {
+        min-width: 190px;
+        border-right: $borderLine;
+        margin-right: 15px;
+        #contact {
+          h4 {
+            margin-bottom: 5px;
+          }
+          p {
+            margin-bottom: 20px;
+          }
+        }
+        #skills {
+          h3 {
+            margin-top: 40px;
+          }
+          progress {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      #rightThing {
+        display: flex;
+        flex-direction: column;
+        .rightThings {
+          border-bottom: $borderLine;
+        }
+        #profile {
+          p{
+            width: 450px;
+
+          }
+        }
+        #social {
+          #links {
+            display: flex;
+            font-size: .8em;
+            justify-content: space-between;
+          }
+
+        }
+        .list {
+          display: flex;
+          label {
+            min-width: 150px;
+          }
+        }
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }

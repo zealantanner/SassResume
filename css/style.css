@@ -6,4 +6,119 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, ol, ul, li {
   /* background-color: black; */
 }
 
+body {
+  background-color: #ddd;
+}
+body #triangle1 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  border-top: 66vw solid #333;
+  border-right: 66vw solid transparent;
+}
+body #contentContainer {
+  background-color: #fff;
+  padding: 100px 60px 0 60px;
+  width: 696px;
+  height: 956px;
+  z-index: -1;
+  box-shadow: -27px 34px 41px 0px black;
+  margin: 65px auto 0 auto;
+  position: relative;
+}
+body #contentContainer hr {
+  border: black solid;
+  border-width: 2px;
+  width: 35px;
+  text-align: right;
+  margin: 10px 0 20px 0;
+}
+body #contentContainer h1, body #contentContainer h2, body #contentContainer h3, body #contentContainer h4 {
+  font-family: "Gill Sans", sans-serif;
+}
+body #contentContainer h1 {
+  font-weight: 500;
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+}
+body #contentContainer h2 {
+  font-weight: 100;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  margin: 10px 0 10px 0;
+}
+body #contentContainer h3 {
+  margin: 10px 0 10px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+body #contentContainer h4 {
+  font-weight: 700;
+  font-size: 1rem;
+}
+body #contentContainer p {
+  font-size: 0.9em;
+}
+body #contentContainer #top {
+  border-bottom: 2px solid darkgray;
+  width: 590px;
+}
+body #contentContainer #top #triangle2 {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  top: 0;
+  border-top: 400px solid black;
+  border-left: 400px solid transparent;
+}
+body #contentContainer #bottom {
+  display: flex;
+}
+body #contentContainer #bottom #leftThing {
+  min-width: 190px;
+  border-right: 2px solid darkgray;
+  margin-right: 15px;
+}
+body #contentContainer #bottom #leftThing #contact h4 {
+  margin-bottom: 5px;
+}
+body #contentContainer #bottom #leftThing #contact p {
+  margin-bottom: 20px;
+}
+body #contentContainer #bottom #leftThing #skills h3 {
+  margin-top: 40px;
+}
+body #contentContainer #bottom #leftThing #skills progress {
+  margin-bottom: 20px;
+}
+body #contentContainer #bottom #rightThing {
+  display: flex;
+  flex-direction: column;
+}
+body #contentContainer #bottom #rightThing .rightThings {
+  border-bottom: 2px solid darkgray;
+}
+body #contentContainer #bottom #rightThing #profile p {
+  width: 450px;
+}
+body #contentContainer #bottom #rightThing #social #links {
+  display: flex;
+  font-size: 0.8em;
+  justify-content: space-between;
+}
+body #contentContainer #bottom #rightThing .list {
+  display: flex;
+}
+body #contentContainer #bottom #rightThing .list label {
+  min-width: 150px;
+}
+body #contentContainer #bottom #rightThing p {
+  margin-bottom: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
